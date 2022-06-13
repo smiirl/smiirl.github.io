@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Update</title>
+  </head>
+  <body>
+    <script>
+      /*var xhr = new XMLHttpRequest();
+      var url = "http://192.168.2.1";
+      xhr.open("POST", url, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var json = JSON.parse(xhr.responseText);
+          console.log(json);
+        }
+      };
+      var data = JSON.stringify({ email: "hey@mail.com", password: "101010" });
+      console.log("send...", data, xhr);
+      xhr.send(data);*/
+
+      var xhr = new XMLHttpRequest();
+      var url = "http://192.168.2.1/cgi-bin/luci/smiirl/api/system/id";
+      xhr.open("GET", url, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          
+          console.log(xhr.responseText);
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>
